@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server",
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "start": "concurrently live-server \"npm run compile:sass\"  ",
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^4.1.0",
     "node-sass": "^4.11.0"
   }
 }
